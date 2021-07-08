@@ -1,1 +1,22 @@
 // Mixins in here
+// .btn-color(@background-color,@color){
+//     background-color:@eastern-blue;
+//     color:@white;
+// }
+.btn-style(@color, @bgcolor){
+    background-color: @bg-color;
+    color: @color;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 12px;
+    width: 85%;
+    text-align: center;
+}
+.ease-in(){
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: @eastern-blue;
+    transition: @transition;
+    }
+    

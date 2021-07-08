@@ -1,24 +1,79 @@
+.big-one{
+  @media @mobile{
+    margin: 25px;
+  }
+}
+
+header{
+  display: flex;
+  align-items: center;
+  margin: 14px auto;
+  width: 800px;
+  justify-content: space-between;
+  @media @mobile{
+    width: 100%;
+    flex-direction: column;
+  }
+  h1{
+    @media @mobile{
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .home {
+ 
+  .top-section{
+    border-bottom: 2px dashed @navigation-border;
+    img{
+      border-top: 2px dashed @navigation-border;
+      margin-bottom: 20px;
+    }
+    p{
+      @media @mobile{
+        margin-bottom: 10px;
+      }
+    }
+  }
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @mobile{
+      flex-direction: column;
+    }
+    
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width: 100%;
+        flex-direction: column;
+      }
+      h1, p{
+        @media @mobile{
+          font-size: 15px;
+        }
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
+        @media @mobile{
+          width: 100%;
+        }
       }
     }
   }
@@ -26,6 +81,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -41,9 +100,13 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile{
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      
     }
   }
 
@@ -52,10 +115,42 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile{
+      flex-direction: column;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile{
+        width: 100%;
+        margin: 13px 35px;
+      }
+      h4{
+        @media @mobile{
+          font-size: 24px;
+        }
+      }
+       p{
+        @media @mobile{
+          font-size: 18px;
+        }
+      }
+      .btn{
+        .btn-style(@color, @bg-color);
+      }
+    }
+  }
+  .last-sect{
+    text-align: center;
+    form{
+      font-size: 16px;
+      ul{
+        display: flex;
+        li{
+
+        }
+      }
     }
   }
 }// home
